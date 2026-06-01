@@ -39,7 +39,7 @@ export async function makeApiRequest(apiKey: string, endpoint: string, params: R
 
     const response = await fetch(url, requestOptions)
 
-    if (!response.ok) return `Error fetching data from HubSpot: Status ${response.status}`
+    if (!response.ok) return `Error fetching data from HubSpot: Status ${response.status}. Response: ${await response.text()}`
 
     if (response.status === 204) return `No data returned: Status ${response.status}`
 
