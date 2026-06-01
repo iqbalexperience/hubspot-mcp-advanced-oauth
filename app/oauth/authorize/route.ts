@@ -70,7 +70,7 @@ export async function GET(req: Request) {
 
   // Standard HubSpot CRM scopes
   const hubspotScopes =
-    "crm.objects.contacts.read crm.objects.contacts.write crm.objects.deals.read oauth";
+    "crm.objects.contacts.read crm.objects.contacts.write crm.objects.companies.read crm.objects.companies.write crm.objects.deals.read crm.objects.deals.write crm.objects.quotes.read crm.objects.quotes.write crm.objects.line_items.read crm.objects.line_items.write crm.objects.tickets.read crm.objects.tickets.write crm.objects.owners.read crm.objects.custom.read crm.objects.custom.write crm.objects.marketing_events.read crm.objects.marketing_events.write crm.objects.appointments.read crm.objects.appointments.write crm.objects.commercepayments.read crm.objects.carts.read crm.objects.carts.write crm.lists.read crm.lists.write crm.schemas.contacts.read crm.schemas.companies.read crm.schemas.deals.read crm.schemas.quotes.read crm.schemas.line_items.read crm.schemas.tickets.read crm.schemas.custom.read content.read content.write files.read files.write forms.read forms.write automation settings.read settings.write webhooks oauth timeline business-intelligence collector.read collector.write integration-sync oauth";
 
   const authorizeUrl = new URL("https://app.hubspot.com/oauth/authorize");
   authorizeUrl.searchParams.set("client_id", hubspotClientId);
